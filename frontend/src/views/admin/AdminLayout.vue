@@ -86,12 +86,15 @@ export default {
 
 <style scoped>
 .admin-layout {
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
 }
 
 .el-aside {
   background-color: #304156;
   color: white;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .logo {
@@ -100,6 +103,7 @@ export default {
   align-items: center;
   justify-content: center;
   background-color: #263445;
+  flex-shrink: 0;
 }
 
 .logo h2 {
@@ -111,6 +115,8 @@ export default {
 .admin-menu {
   border: none;
   background-color: #304156;
+  height: calc(100% - 60px);
+  overflow-y: auto;
 }
 
 .admin-menu:not(.el-menu--collapse) {
@@ -133,6 +139,7 @@ export default {
   padding: 0 20px;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .header-content {
@@ -151,5 +158,7 @@ export default {
 .el-main {
   background-color: #f0f2f5;
   padding: 20px;
+  overflow-y: auto;
+  flex: 1;
 }
 </style>
